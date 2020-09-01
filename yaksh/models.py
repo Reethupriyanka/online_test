@@ -1178,6 +1178,13 @@ class CourseStatus(models.Model):
     percent_completed = models.IntegerField(default=0)
     certificate = models.CharField(max_length=255)
 
+    def get_certificateStatus(self):
+        return self.certificate
+
+    def set_certificateStatus(self):
+        self.certificate = True
+        self.save()
+
     def get_grade(self):
         return self.grade
 
