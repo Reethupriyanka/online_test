@@ -97,3 +97,4 @@ def mail_certificate(send_to):
     
     email.attach_file('certificate.pdf')
     email.send()
+    
